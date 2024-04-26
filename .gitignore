@@ -3,7 +3,11 @@
 *.swp
 *~
 
-# The game.
+# The game's data files.
 STTNG.ZIP
 sttng.zip
+
+# Steve Jobs
+.DS_Store
+
 
