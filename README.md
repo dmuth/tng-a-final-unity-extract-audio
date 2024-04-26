@@ -1,4 +1,6 @@
 
+<img src="./img/star-trek-tng-a-final-unity.jpg" align="right" />
+
 # Extract Audio Files from Star Trek: The Next Generation: A Final Unity
 
 I'm a big fan of Star Trek: The Next Generation, including their 1996 game: [A Final Unity](https://en.wikipedia.org/wiki/Star_Trek:_The_Next_Generation_%E2%80%93_A_Final_Unity).
