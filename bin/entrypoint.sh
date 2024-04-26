@@ -17,6 +17,9 @@ then
     exit 1
 fi
 
+# Set this so we can't run this script again. :-)
+export DOCKER=true
+
 # Let's go to our host directory, where all the files are.
 cd /mnt
 
@@ -25,7 +28,6 @@ echo "# Welcome to the Star Trek: TNG: A Final Unity Utilities Docker Container!
 echo "# "
 
 FILE="STTNG.ZIP"
-shopt -s nocaseglob
 
 echo -n "# Checking to see if file ${FILE} exists..."
 if test ! -f "${FILE}"
@@ -39,8 +41,6 @@ then
 fi
 
 echo "Found!"
-
-shopt -u nocaseglob  # Reset to case-sensitive matching (optional)
 
 echo "# "
 echo "# The host filesystem is in: /mnt"
