@@ -6,6 +6,17 @@
 # Errors are fatal
 set -e
 
+# 
+# Make sure we're not inside of Docker
+#
+if test "${DOCKER}"
+then
+    echo "! "
+    echo "! Don't run this inside of the Docker container!"
+    echo "! "
+    exit 1
+fi
+
 # Let's go to our host directory, where all the files are.
 cd /mnt
 
@@ -33,7 +44,7 @@ shopt -u nocaseglob  # Reset to case-sensitive matching (optional)
 
 echo "# "
 echo "# The host filesystem is in: /mnt"
-echo "# Utilities are in: /mnt/bin/"
+echo "# Utilities are in: /mnt/bin/ and /mnt/external-tools/"
 echo "# "
 
 #
