@@ -18,7 +18,7 @@ unzip -n ${FILE} *.rac -d files/ambient
 echo "# "
 echo "# Extracting Sound Effect files (*.mac)..."
 echo "# "
-unzip -n ${FILE} *.rac -d files/sfx
+unzip -n ${FILE} *.mac -d files/sfx
 
 echo "# "
 echo "# Extracting Voice  Audio files (*.vac) and subtitle (*.bst) files..."
