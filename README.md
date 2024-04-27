@@ -11,6 +11,25 @@ so I built this repo out to make that possible.
 
 ## Usage
 
-(I'll fill this in as soon as I'm done with the repo!)
+Stand up the Docker container:
+- `./bin/build.sh` - Build the `sttng` Docker image
+- `./bin/run.sh` - Run the `sttng` Docker image in an interactive shell
+
+While in the Docker container, these are the scripts you'll want to run:
+- `/mnt/bin/1-extract-files.sh` - Extract the RAC, MAC, and VAC files from the STTNG.ZIP file.
+- `/mnt/bin/2-extract-subtitles.sh` - Extract the subtitles to a JSON file
+- `/mnt/bin/3-extract-wav-files.sh` - Extract the actual WAV files
+
+Files will be written to `/mnt/files/`, which is really `files/` in the host filesystem.
+
+
+## Credits
+
+Docker container and scripts mentioned above built by me.
+
+The underlying Python scripts which do the extraction can be found at
+[https://github.com/discully/afinalunity](https://github.com/discully/afinalunity) and
+were created by [Dr Daniel I. Scully](https://danielscully.uk/).
+
 
 
