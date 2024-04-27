@@ -46,6 +46,14 @@ echo "# "
 echo "# The host filesystem is in: /mnt"
 echo "# Utilities are in: /mnt/bin/ and /mnt/external-tools/"
 echo "# "
+echo "# These are the scripts you'll want to run to extract the sound files:"
+echo "# "
+echo "# /mnt/bin/1-extract-files.sh - Extract the RAC, MAC, and VAC files from the STTNG.ZIP file."
+echo "# /mnt/bin/2-extract-subtitles.sh - Extract the subtitles to a JSON file"
+echo "# /mnt/bin/3-extract-wav-files.sh - Extract the actual WAV files"
+echo "# "
+echo "# Files will be written to /mnt/files/, which is really files/ in the host filesystem."
+echo "# "
 
 #
 # Check to see if we are in test mode.  This is so we can test our entrypoint logic
