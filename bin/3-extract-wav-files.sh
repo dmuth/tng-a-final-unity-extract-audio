@@ -8,10 +8,36 @@ set -e
 
 pushd $(dirname $0)/.. > /dev/null
 
-cd files/ambient
+function convert_ambient() {
 
-echo "# "
-echo "# Extracting ambient sound files in files/ambient/..."
-echo "# "
-python /mnt/external-tools/afu_to_wav.py *.rac
+    pushd files/ambient > /dev/null
+
+    echo "# "
+    echo "# Extracting ambient sound files in files/ambient/..."
+    echo "# "
+    python /mnt/external-tools/afu_to_wav.py *.rac
+
+    popd > /dev/null
+
+} # End of convert_ambient()
+
+
+function convert_voice() {
+
+    pushd files/voice > /dev/null
+
+    echo "# "
+    echo "# Extracting voice sound files in files/voice/..."
+    echo "# "
+    python /mnt/external-tools/afu_to_wav.py *.vac
+
+    popd > /dev/null
+
+
+} # End of convert_voice()
+
+
+convert_ambient
+convert_voice
+
 
